@@ -1,4 +1,4 @@
-pipeline{
+opipeline{
   agent any
   stages{
     stage('Clone repository'){
@@ -9,7 +9,7 @@ pipeline{
     stage('Build'){
       steps{
         build 'PES1UG21CS612-1'
-        sh 'g++ hello.cpp -o output'
+        sh 'g++ hello.cpp -o hello_exec'
       }
     }
     stage('Test'){
